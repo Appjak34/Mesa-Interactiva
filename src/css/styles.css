@@ -1,0 +1,45 @@
+/*
+Styles defoult
+*/
+body {
+    margin: 0;
+    font-family: 'Roboto';
+}
+
+ul {
+    padding: 0
+}
+
+/*
+Styles Custom
+*/
+
+.drop-zone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.canvasArea {
+    background-color: #f0f0f0;
+    display: block;
+}
+
+.listImg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.listImg li {
+    padding: 10px 20px;
+    display: inline-block;
+    width: 150px;
+}
+
+.listImg li img {
+    width: 100%;
+
+}
+
