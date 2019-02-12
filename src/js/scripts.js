@@ -39,6 +39,22 @@ function drawImg2() {
 
 }
 
+function siemaFunction(){
+    new Siema({
+            selector: '.siema',
+            duration: 200,
+            easing: 'ease-out',
+            perPage: 1,
+            startIndex: 0,
+            draggable: true,
+            multipleDrag: true,
+            threshold: 10,
+            loop: true,
+            rtl: false,
+        }
+    );
+}
+
 $(document).ready(function () {
 
     $('.listImg li').draggable({
@@ -79,5 +95,8 @@ $(document).ready(function () {
         $('#canvasAreaTwo').draggable();
 
     });
+
+    /* execute caurusel funtion */
+    siemaFunction();
 
 });
