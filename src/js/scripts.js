@@ -48,7 +48,7 @@ function siemaFunction(){
             startIndex: 0,
             draggable: true,
             multipleDrag: true,
-            threshold: 10,
+            threshold: 200,
             loop: true,
             rtl: false,
         }

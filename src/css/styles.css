@@ -42,3 +42,16 @@ Styles Custom
     width: 100%;
 
 }
+.listImg li p{
+    text-align: center
+}
+/*Caurusel properties*/
+.caruosel-phones{
+      width: 100%;
+      max-width: 50rem;
+      margin: 0 auto;
+}
+
+.siema {
+    margin: 1rem 0;
+}
