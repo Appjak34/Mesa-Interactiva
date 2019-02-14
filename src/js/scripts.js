@@ -63,7 +63,7 @@ $(document).ready(function () {
             revert: false,
             helper: 'clone',
             
-            appendTo: "body",
+        appendTo: $(".imageDest"),
             cursor: "move",
             
         }
