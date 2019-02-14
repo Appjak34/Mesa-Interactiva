@@ -48,7 +48,7 @@ function siemaFunction(){
             startIndex: 0,
             draggable: true,
             multipleDrag: true,
-            threshold: 200,
+            threshold: 100,
             loop: true,
             rtl: false,
         }
@@ -57,13 +57,18 @@ function siemaFunction(){
 
 $(document).ready(function () {
 
-    $('.listImg li').draggable({
+    $('.siema li').draggable({
             containment: 'document',
             opacity: 0.60,
             revert: false,
-            helper: 'clone'
+            helper: 'clone',
+            
+            appendTo: "body",
+            cursor: "move",
+            
         }
     );
+    
 
     $('#canvasAreaOne').droppable({
         hoverClass: 'borda', tolerance: 'pointer',
@@ -98,5 +103,6 @@ $(document).ready(function () {
 
     /* execute caurusel funtion */
     siemaFunction();
+
 
 });
