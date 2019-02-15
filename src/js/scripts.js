@@ -56,28 +56,50 @@ function siemaFunction(){
 function detectImageOnDropArea(phoneName){
 
     switch(phoneName){ //querys database by name phone
-        case "Galaxy s9":{
+        case "Galaxy S9":{
             //make somewhere 
+            alert("hola soy el phone");
             break;
         }
         case "Moto G7": {
             //make somewhere
+            alert("hola soy el phone");
             break;
         }
-        case "Huawei P 20 lite": {
+        case "Huawei P20 Lite": {
             //make somewhere
+            alert("hola soy el phone");
             break;
         }
         case "Huawei Nova 3": {
             //make somewhere
+            alert("hola soy el phone");
             break;
         }
         case "Iphone 6": {
             //make somewhere
+            alert("hola soy el phone");
             break;
         }
-        case "Galaxy j2": {
+        case "Galaxy J2": {
             //make somewhere
+            alert("hola soy el phone");
+            break;
+        }
+        case "Xiaomy Note5":{
+            alert("hola soy el phone");
+            break;
+        }
+        case "Iphone X": {
+            alert("hola soy el phone");
+            break;
+        }
+        case "Iphone X": {
+            alert("hola soy el phone");
+            break;
+        }
+        case "Xperia L2": {
+            alert("hola soy el phone");
             break;
         }
         default:{
