@@ -40,19 +40,18 @@ function drawImg2() {
 }
 
 function siemaFunction(){
-    new Siema({
+        new Siema({
             selector: '.siema',
             duration: 200,
             easing: 'ease-out',
-            perPage: 1,
-            startIndex: 0,
-            draggable: true,
+            perPage: 4,
+            startIndex: 1,
+            //draggable: true,
             multipleDrag: true,
-            threshold: 100,
+            threshold: 150,
             loop: true,
             rtl: false,
-        }
-    );
+        });
 }
 function detectImageOnDropArea(phoneName){
 
@@ -129,8 +128,8 @@ $(document).ready(function () {
             canvasImg.attr("src", newSrc);
             drawImg2();
 
-            var namePhone = ui.draggable.find('p').text(); //get phone image text
-            alert(namePhone);
+            var name = ui.draggable.find('p').text(); //get phone image text
+            detectImageOnDropArea(name);
         }
     });
 
@@ -141,9 +140,5 @@ $(document).ready(function () {
 
     /* execute caurusel funtion */
     siemaFunction();
-
-    /*detect image on drop area */
-
-
 
 });

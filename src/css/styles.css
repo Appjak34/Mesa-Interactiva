@@ -33,6 +33,10 @@ Styles Custom
 
 }
 
+.listImg > .siema{
+    width: 100%;
+}
+
 .listImg li {
     padding: 10px 20px;
     display: inline-block;
@@ -41,7 +45,6 @@ Styles Custom
 
 .listImg li img {
     width: 100%;
-
 }
 .listImg li p{
     text-align: center
@@ -52,3 +55,4 @@ Styles Custom
       max-width: 50rem;
       margin: 0 auto;
 }
+
