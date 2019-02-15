@@ -1,15 +1,37 @@
 <?php 
 
-	$server = 'localhost';
-	$username = 'root';
-	$password= '';
-	$database= 'mesa';
-	$conexion=mysqli_connect($server,$username,$password)or die("No se ha podido establecer la conexion");
-	$sdb=mysqli_select_db($conexion,$database)or die("La base de datos no existe");
-	try {
-		$conn= new PDO("mysql:host=$server;dbname=$database;", $username, $password);
-	} catch (PDOException $e) {
+class Conexion{
+	
+	private $server = 'localhost';
+	private $username = 'root';
+	private $password = 'ACM1PT';
+	private $database = 'mesa';
 
-		die('Connection failed: '.$e->getMessage());
+
+	public function conectarBD()
+	{
+		$conexion = new mysqli($this->server, $this->username, $this->password, $this->database);
+    
+        /* verificar la conexión */
+		if (mysqli_connect_errno()) {
+			printf("Falla de la conexión : %s\n", $mysqli->connect_error);
+			exit();
+		} else {
+			return $conexion;
+            /* liberar la serie de resultados */
+			$resultado->free();
+            /* cerrar la conexión */
+			$mysqli->close();
+		}
 	}
+
+	public function getData(){
+		$conexion = $this->conectarBD();
+		$consulta = "SELECT * FROM telefono";
+		$resultado = $conexion->query($consulta);
+		return $resultado;
+	}
+
+}
+
  ?>

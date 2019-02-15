@@ -37,10 +37,9 @@
         <div class="siema">
                <?php
                     include './database/conexion.php';
-                    $consulta="SELECT * FROM telefono";
-                    $query=mysqli_query($conexion,$consulta);
-
-                    while( $data=mysqli_fetch_array($query, MYSQLI_ASSOC) ){
+                    $conectarDB = new Conexion;
+                    $resultado = $conectarDB->getData();
+                    while( $data = $resultado->fetch_assoc() ){
                 ?>
                     <div>
                         <li>
