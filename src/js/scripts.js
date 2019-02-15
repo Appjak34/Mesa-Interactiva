@@ -40,30 +40,66 @@ function drawImg2() {
 }
 
 function siemaFunction(){
-    new Siema({
+        new Siema({
             selector: '.siema',
             duration: 200,
             easing: 'ease-out',
-            perPage: 1,
-            startIndex: 0,
-            draggable: true,
+            perPage: 4,
+            startIndex: 1,
+            //draggable: true,
             multipleDrag: true,
-            threshold: 200,
+            threshold: 150,
             loop: true,
             rtl: false,
+        });
+}
+function detectImageOnDropArea(phoneName){
+
+    switch(phoneName){ //querys database by name phone
+        case "Galaxy s9":{
+            //make somewhere 
+            break;
         }
-    );
+        case "Moto G7": {
+            //make somewhere
+            break;
+        }
+        case "Huawei P 20 lite": {
+            //make somewhere
+            break;
+        }
+        case "Huawei Nova 3": {
+            //make somewhere
+            break;
+        }
+        case "Iphone 6": {
+            //make somewhere
+            break;
+        }
+        case "Galaxy j2": {
+            //make somewhere
+            break;
+        }
+        default:{
+            //other phones names
+            break;
+        }
+
+    }
 }
 
 $(document).ready(function () {
 
-    $('.listImg li').draggable({
+    $('.siema li').draggable({
             containment: 'document',
             opacity: 0.60,
             revert: false,
-            helper: 'clone'
+            helper: 'clone',
+            appendTo: $(".imageDest"),
+            cursor: "move"
         }
     );
+    
 
     $('#canvasAreaOne').droppable({
         hoverClass: 'borda', tolerance: 'pointer',
@@ -73,6 +109,9 @@ $(document).ready(function () {
             var newSrc = droppedItem.find('img').attr('src');
             canvasImg.attr("src", newSrc);
             drawImg();
+
+            var name = ui.draggable.find('p').text(); //get phone image text
+            detectImageOnDropArea(name);
         }
     });
 
@@ -88,6 +127,9 @@ $(document).ready(function () {
             var newSrc = droppedItem.find('img').attr('src');
             canvasImg.attr("src", newSrc);
             drawImg2();
+
+            var name = ui.draggable.find('p').text(); //get phone image text
+            detectImageOnDropArea(name);
         }
     });
 

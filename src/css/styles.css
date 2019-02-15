@@ -21,6 +21,7 @@ Styles Custom
 }
 
 .canvasArea {
+    border-radius: 15px;
     background-color: #f0f0f0;
     display: block;
 }
@@ -32,6 +33,10 @@ Styles Custom
 
 }
 
+.listImg > .siema{
+    width: 100%;
+}
+
 .listImg li {
     padding: 10px 20px;
     display: inline-block;
@@ -40,7 +45,6 @@ Styles Custom
 
 .listImg li img {
     width: 100%;
-
 }
 .listImg li p{
     text-align: center
@@ -52,6 +56,3 @@ Styles Custom
       margin: 0 auto;
 }
 
-.siema {
-    margin: 1rem 0;
-}
