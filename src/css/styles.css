@@ -14,10 +14,6 @@ ul {
 Styles Custom
 */
 
-.container-fluid{
-    height: 50%;
-}
-
 .drop-zone {
     display: flex;
     align-items: center;

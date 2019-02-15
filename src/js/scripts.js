@@ -54,6 +54,40 @@ function siemaFunction(){
         }
     );
 }
+function detectImageOnDropArea(phoneName){
+
+    switch(phoneName){ //querys database by name phone
+        case "Galaxy s9":{
+            //make somewhere 
+            break;
+        }
+        case "Moto G7": {
+            //make somewhere
+            break;
+        }
+        case "Huawei P 20 lite": {
+            //make somewhere
+            break;
+        }
+        case "Huawei Nova 3": {
+            //make somewhere
+            break;
+        }
+        case "Iphone 6": {
+            //make somewhere
+            break;
+        }
+        case "Galaxy j2": {
+            //make somewhere
+            break;
+        }
+        default:{
+            //other phones names
+            break;
+        }
+
+    }
+}
 
 $(document).ready(function () {
 
@@ -62,10 +96,8 @@ $(document).ready(function () {
             opacity: 0.60,
             revert: false,
             helper: 'clone',
-            
-        appendTo: $(".imageDest"),
-            cursor: "move",
-            
+            appendTo: $(".imageDest"),
+            cursor: "move"
         }
     );
     
@@ -78,6 +110,9 @@ $(document).ready(function () {
             var newSrc = droppedItem.find('img').attr('src');
             canvasImg.attr("src", newSrc);
             drawImg();
+
+            var name = ui.draggable.find('p').text(); //get phone image text
+            detectImageOnDropArea(name);
         }
     });
 
@@ -93,6 +128,9 @@ $(document).ready(function () {
             var newSrc = droppedItem.find('img').attr('src');
             canvasImg.attr("src", newSrc);
             drawImg2();
+
+            var namePhone = ui.draggable.find('p').text(); //get phone image text
+            alert(namePhone);
         }
     });
 
@@ -103,6 +141,9 @@ $(document).ready(function () {
 
     /* execute caurusel funtion */
     siemaFunction();
+
+    /*detect image on drop area */
+
 
 
 });
