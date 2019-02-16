@@ -1,3 +1,8 @@
+<?php
+include './database/conexion.php';
+$conectarDB = new Conexion;
+$resultado = $conectarDB->getData();
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,7 +13,7 @@
 
 </head>
 <body>
-<div class="container-fluid">
+<div class="container-fluid mesa-interactiva">
     <div class="drop-zone">
         <!--Dropzone Canvas-->
         <section class="drop-phone">
@@ -16,21 +21,28 @@
                 <img id="imgPhoneOne" src="img/intro2.jpg" alt="my Image Canvas">
             </canvas>
         </section>
+
+
         <section class="data-phones">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsum recusandae amet ipsa, iste dolorem veniam,
-            est distinctio consequuntur non eligendi ab ratione eveniet totam aperiam tempora magnam quisquam dolorum
-            praesentium?
-            Eaque dolore quam assumenda saepe sapiente harum quod alias et excepturi repudiandae architecto sunt sequi
-            ducimus nemo id quas, praesentium quasi, doloremque, vitae natus obcaecati deserunt. Maxime laboriosam
-            consequatur animi?
-            Illum fugiat, ipsam natus expedita autem cum repellat aperiam quae! Aliquid voluptatum cum similique illum
-            labore assumenda repudiandae at quis dicta consequuntur neque, beatae temporibus animi libero ex?
-            Laboriosam, similique.
-            Soluta quae commodi temporibus doloremque aliquam quibusdam vitae delectus ullam, tempore nobis, vero
-            nostrum sint alias odio rem, omnis assumenda exercitationem eaque! At provident nesciunt iusto modi
-            quibusdam odit eius?
-            Nam, accusamus consectetur sunt veniam ab maxime fugit quasi ad sequi aperiam voluptates eos vero aliquid
-            facere consequuntur perspiciatis quam assumenda nulla recusandae harum dolor ea ex. Ipsum, qui alias!
+
+            <div class="content-phone-one">
+                <div class="nombre"></div>
+                <div class="precio"></div>
+                <div class="marca"></div>
+                <div class="modelo"></div>
+                <div class="descripcion"></div>
+                <div class="color"></div>
+            </div>
+
+            <div class="content-phone-two">
+                <div class="nombre"></div>
+                <div class="precio"></div>
+                <div class="marca"></div>
+                <div class="modelo"></div>
+                <div class="descripcion"></div>
+                <div class="color"></div>
+            </div>
+
         </section>
 
         <section class="drop-phone">
@@ -45,21 +57,21 @@
 
         <ul class="listImg">
             <div class="slider">
-                <?php
-                include './database/conexion.php';
-                $conectarDB = new Conexion;
-                $resultado = $conectarDB->getData();
-                while ($data = $resultado->fetch_assoc()) {
-                    ?>
+                <?php while ($data = $resultado->fetch_assoc()) { ?>
                     <div class="slide">
                         <li>
-                            <img src='./assets/img/<?php echo $data['Imagen']; ?>' alt="phone image"
-                                 class="img-responsive center-block">
+                            <img src='./assets/img/<?php echo $data['Imagen']; ?>'
+                                 data-name='<?php echo $data['Nombre'] ?>'
+                                 data-price='<?php echo $data['Precio'] ?>'
+                                 data-company='<?php echo $data['Marca'] ?>'
+                                 data-model='<?php echo $data['Modelo'] ?>'
+                                 data-description='<?php echo $data['Descripcion'] ?>'
+                                 data-color='<?php echo $data['Color'] ?>'
+                                 alt="phone image" class="img-responsive center-block">
                             <p class="text-center"><?php echo $data['Nombre']; ?></p>
                         </li>
                     </div>
-                    <?php
-                } ?>
+                <?php } ?>
             </div>
 
         </ul>
@@ -67,13 +79,13 @@
 
 </div>
 
-<!--prueba-->
 
 </body>
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
+<script src="./src/js/Telefono.class.js"></script>
 <script src="./src/js/MesaInteractiva.class.js"></script>
 <script src="./src/js/scripts.js"></script>
 

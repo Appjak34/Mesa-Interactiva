@@ -1,8 +1,12 @@
 /*
 Styles defoult
 */
+html {
+    height: 100%;
+}
 
 body {
+    height: 100%;
     margin: 0;
     font-family: 'Roboto';
 }
@@ -11,20 +15,51 @@ ul {
     padding: 0
 }
 
+.mesa-interactiva {
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+
+    animation: backgroudColor 5s ease-in-out infinite;
+    background: -moz-linear-gradient(150deg, #0E6BEE 39%, #4CFFA3 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, 150deg, color-stop(39%, 0 E6BEE), color-stop(100%, 4 CFFA3)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(150deg, #0E6BEE 39%, #4CFFA3 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(150deg, #0E6BEE 39%, #4CFFA3 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(150deg, #0E6BEE 39%, #4CFFA3 100%); /* IE10+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
+    background: linear-gradient(150deg, #0E6BEE 39%, #4CFFA3 100%); /* W3C */
+    background-attachment: fixed;
+    background-size: 200% 200%;
+}
+
 /*
 Styles Custom
 */
 
 .drop-zone {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.drop-zone .data-phone {
+    width: 100%;
+}
+
 .canvasArea {
     border-radius: 15px;
-    background-color: #f0f0f0;
+    background-color: #efefef;
     display: block;
+    -webkit-box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.75);
 }
 
 .listImg {
@@ -36,7 +71,7 @@ Styles Custom
 .listImg li {
     padding: 10px 20px;
     display: inline-block;
-    width: 150px;
+    width: 120px;
 }
 
 .listImg li img {
@@ -48,14 +83,40 @@ Styles Custom
 }
 
 .slider {
-    width: 700px;
+    width: 670px;
     height: auto;
     display: flex;
     overflow-x: auto;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 38px 0px rgba(0, 0, 0, 0.75);
+
+    border-radius: 15px;
 }
 
 .slide {
-    width: 200px;
+    width: 170px;
     flex-shrink: 0;
     height: 100%;
+}
+
+/*Animations*/
+
+@keyframes backgroudColor {
+    0% {
+        background-position: 0% 50%;
+    }
+    20% {
+        background-position: 80% 50%;
+    }
+    60% {
+        background-position: 50% 80%;
+    }
+    80% {
+        background-position: 80% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }

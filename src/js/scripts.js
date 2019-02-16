@@ -54,7 +54,6 @@ function detectImageOnDropArea(phoneName) {
 
     }
 }
-
 $(document).ready(function () {
 
     var listPhones = $('.listImg .slide > li'),
