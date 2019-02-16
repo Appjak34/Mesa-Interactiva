@@ -33,22 +33,25 @@
 
     <!-- list draggable Image -->
 <section class="caruosel-phones">
+
     <ul class="listImg">
-        <div class="siema">
+        <div class="slider">
                <?php
-                    include './database/conexion.php';
-                    $conectarDB = new Conexion;
-                    $resultado = $conectarDB->getData();
-                    while( $data = $resultado->fetch_assoc() ){
-                ?>
-                    <div>
+                include './database/conexion.php';
+                $conectarDB = new Conexion;
+                $resultado = $conectarDB->getData();
+                while ($data = $resultado->fetch_assoc()) {
+                    ?>
+                    <div class="slide">
                         <li>
-                            <img src='./assets/img/<?php echo $data['Imagen'];?>' alt="phone image" class="img-responsive center-block">
-                            <p class="text-center"><?php echo $data['Nombre'];?></p>
+                            <img src='./assets/img/<?php echo $data['Imagen']; ?>' alt="phone image" class="img-responsive center-block">
+                            <p class="text-center"><?php echo $data['Nombre']; ?></p>
                         </li>
                     </div>
-                <?php } ?>
+                <?php 
+            } ?>
         </div>
+
     </ul>
 </section>
 
@@ -60,7 +63,6 @@
 
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-<script src="./src/js/siema.min.js"></script>
 <script src="./src/js/scripts.js"></script> <!-- https://pawelgrzybek.github.io/siema/#api -->
 
 </html>

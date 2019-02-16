@@ -1,6 +1,7 @@
 /*
 Styles defoult
 */
+
 body {
     margin: 0;
     font-family: 'Roboto';
@@ -20,12 +21,6 @@ Styles Custom
     justify-content: space-between;
 }
 
-.dataphones{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-}
-
 .canvasArea {
     border-radius: 15px;
     background-color: #f0f0f0;
@@ -36,11 +31,6 @@ Styles Custom
     display: flex;
     align-items: center;
     justify-content: center;
-
-}
-
-.listImg > .siema{
-    width: 100%;
 }
 
 .listImg li {
@@ -52,13 +42,20 @@ Styles Custom
 .listImg li img {
     width: 100%;
 }
-.listImg li p{
+
+.listImg li p {
     text-align: center
 }
-/*Caurusel properties*/
-.caruosel-phones{
-      width: 100%;
-      max-width: 50rem;
-      margin: 0 auto;
+
+.slider {
+    width: 700px;
+    height: auto;
+    display: flex;
+    overflow-x: auto;
 }
 
+.slide {
+    width: 200px;
+    flex-shrink: 0;
+    height: 100%;
+}
