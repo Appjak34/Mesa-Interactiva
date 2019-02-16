@@ -4,7 +4,7 @@ class Conexion{
 	
 	private $server = 'localhost';
 	private $username = 'root';
-	private $password = 'ACM1PT';
+	private $password = 'root';
 	private $database = 'mesa';
 
 
