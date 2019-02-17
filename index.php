@@ -29,7 +29,7 @@ include './database/conexion.php';
                 <img id="imgPhoneOne"  alt="my Image Canvas">
             </canvas>
         </section>
-
+<h1>Reparar</h1>
 
         <section class="data-phones">
 
