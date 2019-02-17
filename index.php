@@ -1,8 +1,11 @@
+<!--php-Block-Code-->
 <?php
 include './database/conexion.php';
-$conectarDB = new Conexion;
-$resultado = $conectarDB->getData();
+    $conectarDB = new Conexion;
+    $resultado = $conectarDB->getData();
 ?>
+<!--endl php-Block-->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -57,7 +60,7 @@ $resultado = $conectarDB->getData();
     <section class="caruosel-phones">
 
         <ul class="listImg">
-            <div class="slider">
+            <div class="slider" id="style-scroll">
                 <?php while ($data = $resultado->fetch_assoc()) { ?>
                     <div class="slide">
                         <li>
