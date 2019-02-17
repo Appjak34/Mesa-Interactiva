@@ -17,7 +17,6 @@ function detectImageOnDropArea(phoneName) {
             break;
         }
         case "Huawei Nova 3": {
-            //make somewhere
             alert("hola soy el phone");
             break;
         }
