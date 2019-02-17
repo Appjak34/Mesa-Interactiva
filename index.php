@@ -12,8 +12,15 @@ include './database/conexion.php';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mesa Interactiva</title>
+    <link rel="icon" type="image/png" href="./assets/img/intro2.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<<<<<<< HEAD
     <link rel="stylesheet" href="./src/css/animate.css">
+=======
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+>>>>>>> 9147dffdce5fee957ce97c6498af4d032299061e
     <link rel="stylesheet" href="./src/css/styles.css">
 
 </head>
@@ -24,7 +31,7 @@ include './database/conexion.php';
         <!--Dropzone Canvas-->
         <section class="drop-phone">
             <canvas id="canvasAreaOne" class="canvasArea" width="243" height="470">
-                <img id="imgPhoneOne" src="img/intro2.jpg" alt="my Image Canvas">
+                <img id="imgPhoneOne"  alt="my Image Canvas">
             </canvas>
         </section>
 
@@ -32,28 +39,89 @@ include './database/conexion.php';
         <section class="data-phones">
 
             <div class="content-phone-one">
-                <div class="nombre"></div>
-                <div class="precio"></div>
-                <div class="marca"></div>
-                <div class="modelo"></div>
-                <div class="descripcion"></div>
-                <div class="color"></div>
+                <div class="circle-data">
+                    <div class="icon">
+                        <span class="fas fa-signature"></span>
+                    </div>
+                    <div class="nombre detail-data"></div>
+                </div>
+                <div class="circle-data">
+                    <div class="icon">
+                        <span class="fas fa-dollar-sign"></span>
+                    </div>
+                    <div class="precio detail-data"></div>
+                </div>
+                <div class="circle-data">
+                    <div class="icon">
+                        <span class="fas fa-mobile-alt"></span>
+                    </div>
+                    <div class="marca detail-data"></div>
+                </div>
+                <div class="circle-data">
+                    <div class="icon">
+                        <span class="fas fa-mobile"></span>
+                    </div>
+                    <div class="modelo detail-data"></div>
+                </div>
+                <div class="circle-data desc">
+                    <div class="icon">
+                        <span class="fas fa-info"></span>
+                    </div>
+                    <div class="descripcion detail-data"></div>
+                </div>
+                <div class="circle-data">
+                    <div class="icon">
+                        <span class="fas fa-palette"></span>
+                    </div>
+                    <div class="color detail-data"></div>
+                </div>
             </div>
 
             <div class="content-phone-two">
-                <div class="nombre"></div>
-                <div class="precio"></div>
-                <div class="marca"></div>
-                <div class="modelo"></div>
-                <div class="descripcion"></div>
-                <div class="color"></div>
+                <div class="circle-data">
+                    <div class="icon">
+                        <span class="fas fa-signature"></span>
+                    </div>
+                    <div class="nombre detail-data"></div>
+                </div>
+                <div class="circle-data">
+                    <div class="icon">
+                        <span class="fas fa-dollar-sign"></span>
+                    </div>
+                    <div class="precio detail-data"></div>
+                </div>
+                <div class="circle-data">
+                    <div class="icon">
+                        <span class="fas fa-mobile-alt"></span>
+                    </div>
+                    <div class="marca detail-data"></div>
+                </div>
+                <div class="circle-data">
+                    <div class="icon">
+                        <span class="fas fa-mobile"></span>
+                    </div>
+                    <div class="modelo detail-data"></div>
+                </div>
+                <div class="circle-data desc">
+                    <div class="icon">
+                        <span class="fas fa-info"></span>
+                    </div>
+                    <div class="descripcion detail-data"></div>
+                </div>
+                <div class="circle-data">
+                    <div class="icon">
+                        <span class="fas fa-palette"></span>
+                    </div>
+                    <div class="color detail-data"></div>
+                </div>
+
             </div>
 
         </section>
 
         <section class="drop-phone">
             <canvas id="canvasAreaTwo" class="canvasArea" width="243" height="470">
-                <img id="imgPhoneTwo" src="img/intro2.jpg" alt="my Image Canvas">
+                <img id="imgPhoneTwo"  alt="my Image Canvas">
             </canvas>
         </section>
     </div>

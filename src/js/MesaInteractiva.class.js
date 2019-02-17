@@ -83,8 +83,9 @@ class MesaInteractiva {
             phoneData.attr('data-color'))
 
         if (selectedCanvasArea === 'canvasAreaOne') {
+            $('.content-phone-one').addClass('phone-selected')
             $('.content-phone-one .nombre').text(phone._name);
-            $('.content-phone-one .precio').text(phone._price);
+            $('.content-phone-one .precio').text('$' + phone._price);
             $('.content-phone-one .marca').text(phone._company);
             $('.content-phone-one .modelo').text(phone._model);
             $('.content-phone-one .descripcion').text(phone._description);
@@ -92,8 +93,9 @@ class MesaInteractiva {
 
         }
         if (selectedCanvasArea === 'canvasAreaTwo') {
+            $('.content-phone-two').addClass('phone-selected');
             $('.content-phone-two .nombre').text(phone._name);
-            $('.content-phone-two .precio').text(phone._price);
+            $('.content-phone-two .precio').text('$' + phone._price);
             $('.content-phone-two .marca').text(phone._company);
             $('.content-phone-two .modelo').text(phone._model);
             $('.content-phone-two .descripcion').text(phone._description);
