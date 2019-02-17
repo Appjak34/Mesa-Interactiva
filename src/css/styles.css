@@ -18,7 +18,7 @@ ul {
 .mesa-interactiva {
 
     height: 100%;
-    display: flex;
+    display: block; /*flex*/
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;

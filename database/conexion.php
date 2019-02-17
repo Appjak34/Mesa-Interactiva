@@ -27,6 +27,7 @@ class Conexion{
 
 	public function getData(){
 		$conexion = $this->conectarBD();
+		$conexion->set_charset("utf8"); // corrige el problema de caracteres de la consulta
 		$consulta = "SELECT * FROM telefono";
 		$resultado = $conexion->query($consulta);
 		return $resultado;

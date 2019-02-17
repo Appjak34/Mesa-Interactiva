@@ -12,6 +12,7 @@ $resultado = $conectarDB->getData();
     <link rel="stylesheet" href="./src/css/styles.css">
 
 </head>
+
 <body>
 <div class="container-fluid mesa-interactiva">
     <div class="drop-zone">

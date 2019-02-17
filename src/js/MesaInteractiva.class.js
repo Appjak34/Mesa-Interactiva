@@ -56,7 +56,7 @@ class MesaInteractiva {
 
                 self.initPhoneData(droppedItem.find('img'), canvasArea.attr('id'))
 
-                var name = ui.draggable.find('p').text();
+                //var name = ui.draggable.find('p').text();
                 //detectImageOnDropArea(name);
             }
         });
