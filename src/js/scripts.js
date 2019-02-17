@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
 
     var listPhones = $('.listImg .slide > li'),
@@ -9,6 +8,5 @@ $(document).ready(function () {
 
 
     new MesaInteractiva(listPhones, canvasAreaOne, canvasAreaTwo, imgAreaPhoneOne, imgAreaPhoneTwo);
-
 
 });

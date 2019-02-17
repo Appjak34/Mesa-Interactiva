@@ -6,15 +6,7 @@ class MesaInteractiva {
         this.initDraggable()
         this.initDroppableArea(canvasAreaOne, imgAreaPhoneOne)
         this.initDroppableArea(canvasAreaTwo, imgAreaPhoneTwo)
-        
-        /*this.addClasesAtributesPhones()*/
     }
-
-    /*addClasesAtributesPhones(){
-        const element = document.querySelector('.content-phone-one')
-        element.classList.add('animated', 'bounceOutLeft')
- 
-    }*/
 
     initDraggable() {
         this._listPhones.draggable({
@@ -45,6 +37,7 @@ class MesaInteractiva {
             canvax.clearRect(imgX, imgY, imgW, imgH);
             canvax.drawImage(imgObj, imgX, imgY, imgW, imgH);
         };
+
     }
 
     initDroppableArea(canvasArea, imgPhone) {
@@ -64,10 +57,11 @@ class MesaInteractiva {
                 self.initPhoneData(droppedItem.find('img'), canvasArea.attr('id'))
 
             }
-
         });
+
         canvasArea.dblclick(() => {
             canvasArea.draggable();
+
         });
 
     }
@@ -90,7 +84,6 @@ class MesaInteractiva {
             $('.content-phone-one .modelo').text(phone._model);
             $('.content-phone-one .descripcion').text(phone._description);
             $('.content-phone-one .color').text(phone._color);
-
         }
         if (selectedCanvasArea === 'canvasAreaTwo') {
             $('.content-phone-two').addClass('phone-selected');
