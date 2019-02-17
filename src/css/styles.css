@@ -161,9 +161,10 @@ Styles Custom
 
 }
 
-.circle-data.desc .descripcion.detail-data{
+.circle-data.desc .descripcion.detail-data {
     display: none;
 }
+
 .circle-data.desc:hover {
     align-items: flex-start;
     width: 230px;
@@ -225,21 +226,18 @@ Styles Custom
 
 /*scroll style*/
 #style-scroll::-webkit-scrollbar {
-    height: 5%;
+    height: 8px;
+    width: 10px;
+
 }
 
 #style-scroll::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: linear-gradient(left, #96A6BF, #63738C);
-    box-shadow: inset 0 0 1px 1px #5C6670;
+    border-radius: 7px;
+    border: 4px solid rgba(0, 0, 0,.5 );
+    background-clip: padding-box;
 }
 
-#style-scroll::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: #eee;
-    box-shadow: 0 0 1px 1px #bbb, inset 0 0 7px rgba(0, 0, 0, 0.3)
-}
 
-#style-scroll::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(left, #8391A6, #536175);
+#style-scroll::-webkit-scrollbar-corner {
+    background-color: transparent;
 }
