@@ -8,6 +8,7 @@ $resultado = $conectarDB->getData();
 <head>
     <meta charset="UTF-8">
     <title>Mesa Interactiva</title>
+    <link rel="icon" type="image/png" href="./assets/img/intro2.png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
           integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -22,7 +23,7 @@ $resultado = $conectarDB->getData();
         <!--Dropzone Canvas-->
         <section class="drop-phone">
             <canvas id="canvasAreaOne" class="canvasArea" width="243" height="470">
-                <img id="imgPhoneOne" src="img/intro2.jpg" alt="my Image Canvas">
+                <img id="imgPhoneOne"  alt="my Image Canvas">
             </canvas>
         </section>
 
@@ -112,7 +113,7 @@ $resultado = $conectarDB->getData();
 
         <section class="drop-phone">
             <canvas id="canvasAreaTwo" class="canvasArea" width="243" height="470">
-                <img id="imgPhoneTwo" src="img/intro2.jpg" alt="my Image Canvas">
+                <img id="imgPhoneTwo"  alt="my Image Canvas">
             </canvas>
         </section>
     </div>

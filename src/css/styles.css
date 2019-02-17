@@ -161,11 +161,19 @@ Styles Custom
 
 }
 
+.circle-data.desc .descripcion.detail-data{
+    display: none;
+}
 .circle-data.desc:hover {
     align-items: flex-start;
     width: 230px;
     height: 200px;
     padding: 10px;
+    display: block;
+}
+
+.circle-data.desc:hover .descripcion.detail-data {
+    display: block;
 }
 
 .circle-data .detail-data {
