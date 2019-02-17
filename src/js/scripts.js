@@ -5,11 +5,10 @@ $(document).ready(function () {
         canvasAreaOne = $('#canvasAreaOne'),
         canvasAreaTwo = $('#canvasAreaTwo'),
         imgAreaPhoneOne = $('#imgPhoneOne'),
-        imgAreaPhoneTwo = $('#imgPhoneTwo')
+        imgAreaPhoneTwo = $('#imgPhoneTwo');
 
 
-    new MesaInteractiva(listPhones, canvasAreaOne, canvasAreaTwo, imgAreaPhoneOne, imgAreaPhoneTwo)
-
+    new MesaInteractiva(listPhones, canvasAreaOne, canvasAreaTwo, imgAreaPhoneOne, imgAreaPhoneTwo);
 
 
 });
