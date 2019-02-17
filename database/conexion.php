@@ -7,6 +7,11 @@ class Conexion{
 	private $password = 'root';
 	private $database = 'mesa';
 
+	/*private $server = 'sql303.epizy.com';   //datos del servidor
+	private $username = 'epiz_23465325';
+	private $password = 'EFjv3oG7kLx3';
+	private $database = 'epiz_23465325_mesa';*/
+
 
 	public function conectarBD()
 	{

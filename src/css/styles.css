@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    height: 100%;
+    /*height: 100%; problemas en opera*/
     margin: 0;
     font-family: 'Roboto';
 }
@@ -14,11 +14,10 @@ body {
 ul {
     padding: 0
 }
-
 .mesa-interactiva {
 
     height: 100%;
-    display: block; /*flex*/
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -121,7 +120,7 @@ Styles Custom
     }
 }
 
-/*scroll style*/
+/*Scroll style*/
 #style-scroll::-webkit-scrollbar {
     height: 5%;
 }
@@ -141,3 +140,37 @@ Styles Custom
 #style-scroll::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(left, #8391A6, #536175);
 }
+
+/*Data phones styles*/
+
+.data-phones{
+    margin: 10px;
+    padding: 50px;
+    border-radius: 10px;
+}
+
+.content-phone-one {
+    margin-top: 10px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+
+    animation: bounceInRight;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+.content-phone-two{
+    margin-top: 10px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+
+    animation: bounceInLeft;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+.nombre, .precio, .marca, .modelo, .descripcion, .color{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+

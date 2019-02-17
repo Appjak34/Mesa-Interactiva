@@ -10,8 +10,10 @@ include './database/conexion.php';
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mesa Interactiva</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="./src/css/animate.css">
     <link rel="stylesheet" href="./src/css/styles.css">
 
 </head>
@@ -65,12 +67,12 @@ include './database/conexion.php';
                     <div class="slide">
                         <li>
                             <img src='./assets/img/<?php echo $data['Imagen']; ?>'
-                                 data-name='<?php echo $data['Nombre'] ?>'
-                                 data-price='<?php echo $data['Precio'] ?>'
-                                 data-company='<?php echo $data['Marca'] ?>'
-                                 data-model='<?php echo $data['Modelo'] ?>'
-                                 data-description='<?php echo $data['Descripcion'] ?>'
-                                 data-color='<?php echo $data['Color'] ?>'
+                                 data-name='<?php echo 'Nobre: '. $data['Nombre'] ?>'
+                                 data-price='<?php echo 'Precio: '.$data['Precio'] ?>'
+                                 data-company='<?php echo 'Marca: ' .$data['Marca'] ?>'
+                                 data-model='<?php echo 'Modelo: ' .$data['Modelo'] ?>'
+                                 data-description='<?php echo 'Descripción: '. "<p>{$data["Descripcion"]}</p>"; ?>'
+                                 data-color='<?php echo 'Color: '.$data['Color'] ?>'
                                  alt="phone image" class="img-responsive center-block">
                             <p class="text-center"><?php echo $data['Nombre']; ?></p>
                         </li>
