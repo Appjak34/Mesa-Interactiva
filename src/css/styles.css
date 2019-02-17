@@ -18,7 +18,7 @@ ul {
 .mesa-interactiva {
 
     height: 100%;
-    display: block; /*flex*/
+    display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -27,13 +27,7 @@ ul {
     padding: 20px;
 
     animation: backgroudColor 5s ease-in-out infinite;
-    background: -moz-linear-gradient(150deg, #0E6BEE 39%, #4CFFA3 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, 150deg, color-stop(39%, 0 E6BEE), color-stop(100%, 4 CFFA3)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(150deg, #0E6BEE 39%, #4CFFA3 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(150deg, #0E6BEE 39%, #4CFFA3 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(150deg, #0E6BEE 39%, #4CFFA3 100%); /* IE10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1301FE', endColorstr='#F4F60C', GradientType='1'); /* for IE */
-    background: linear-gradient(150deg, #0E6BEE 39%, #4CFFA3 100%); /* W3C */
+    background: linear-gradient(150deg, #663797 39%, #00BCD4 100%);
     background-attachment: fixed;
     background-size: 200% 200%;
 }
@@ -43,14 +37,24 @@ Styles Custom
 */
 
 .drop-zone {
+    flex: 1 1 0;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
 }
 
-.drop-zone .data-phone {
+.drop-zone .data-phones {
     width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.drop-zone .data-phones .content-phone-one,
+.drop-zone .data-phones .content-phone-two {
+    width: 50%;
 }
 
 .canvasArea {
@@ -101,6 +105,105 @@ Styles Custom
     height: 100%;
 }
 
+.drop-phone {
+    z-index: 2;
+}
+
+.content-phone-two,
+.content-phone-one {
+    z-index: 1;
+    transition: all .38s ease;
+}
+
+.content-phone-one {
+    transform: translateX(-30%);
+}
+
+.content-phone-two {
+    transform: translateX(30%);
+}
+
+.content-phone-two.phone-selected,
+.content-phone-one.phone-selected {
+    transform: translateX(0);
+    transition: all .5s cubic-bezier(0.25, 0.71, 0.62, 1.49);
+}
+
+.content-phone-one .circle-data,
+.content-phone-two .circle-data {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+    margin-top: 10px;
+    background: #F44336;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0.25, 0.71, 0.62, 1.49);
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: scroll;
+}
+
+.content-phone-two .circle-data {
+    margin-right: 20px;
+    margin-left: auto;
+}
+
+.circle-data:hover {
+    width: 180px;
+    height: 100px;
+    border-radius: 14px;
+    transition: all .38s ease;
+
+}
+
+.circle-data.desc .descripcion.detail-data {
+    display: none;
+}
+
+.circle-data.desc:hover {
+    align-items: flex-start;
+    width: 230px;
+    height: 200px;
+    padding: 10px;
+    display: block;
+}
+
+.circle-data.desc:hover .descripcion.detail-data {
+    display: block;
+}
+
+.circle-data .detail-data {
+    font-size: 18px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: all .28s ease;
+}
+
+.circle-data:hover .detail-data {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: all .28s ease;
+}
+
+.circle-data .icon {
+    opacity: 1;
+    transition: all .28s ease;
+}
+
+.circle-data:hover .icon {
+    width: 0;
+    height: 0;
+    opacity: 0;
+    transition: all .28s ease;
+}
+
 /*Animations*/
 
 @keyframes backgroudColor {
@@ -123,21 +226,18 @@ Styles Custom
 
 /*scroll style*/
 #style-scroll::-webkit-scrollbar {
-    height: 5%;
+    height: 8px;
+    width: 10px;
+
 }
 
 #style-scroll::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: linear-gradient(left, #96A6BF, #63738C);
-    box-shadow: inset 0 0 1px 1px #5C6670;
+    border-radius: 7px;
+    border: 4px solid rgba(0, 0, 0,.5 );
+    background-clip: padding-box;
 }
 
-#style-scroll::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: #eee;
-    box-shadow: 0 0 1px 1px #bbb, inset 0 0 7px rgba(0, 0, 0, 0.3)
-}
 
-#style-scroll::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(left, #8391A6, #536175);
+#style-scroll::-webkit-scrollbar-corner {
+    background-color: transparent;
 }
