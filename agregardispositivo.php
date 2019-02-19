@@ -2,6 +2,7 @@
 session_start();
 include "./database/conexion.php";
 ?>
+<!--Esta parte solo es el forulario de como agregar un nuevo dispositivo en si solo es una pestana que el adminisrador solo vera puesto que solo es informacion de un telefono nuevo para ser detectado en la mesa-->
 <!DOCTYPE HTML>
 <html>
 <head>
