@@ -6,7 +6,7 @@ session_start();
 <html lang="es">
 <head>
 	<meta charset="utf-8"/>
-	<title>Panel de Administración</title>
+	<title>Nuevo Dispositivo</title>
 </head>
 <body>
 
@@ -21,7 +21,7 @@ session_start();
 			<input type="text" name="nombre">
 		</fieldset>
 		<fieldset>
-			precio<br>
+			Precio<br>
 			<input type="text" name="precio">
 		</fieldset>
 		<fieldset>
