@@ -3,7 +3,7 @@
 ob_start(); //mala practica
 include("index.php");
 require_once("./database/conexion.php");
-
+//solo cabe mencionar que esta manera de agregar dispossitivo es solo la forma en como se agrega nueva informacion a la mesa virtual
 class NuevoDispositivo{
 	
 	private $conexion;
