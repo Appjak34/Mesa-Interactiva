@@ -32,17 +32,17 @@ session_start();
 						<h4>Nombre</h4>
 						<input type="text" class="nombre" placeholder="Moto x4" required="" name="nombre">
 						<h4>Precio</h4>
-						<input type="text" class="precio" placeholder="" name="precio">
+						<input type="text" class="precio" placeholder="" required="" name="precio">
 						<h4>Marca</h4>
-						<input type="text" class="marca" placeholder="Motorola" name="marca">
+						<input type="text" class="marca" placeholder="Motorola" required="" name="marca">
 						<h4>Modelo</h4>
-						<input type="text" class="modelo" placeholder="Modelo" name = "modelo">
+						<input type="text" class="modelo" placeholder="Modelo" required="" name = "modelo">
 						<h4>Color</h4>
-						<input type="text" class="color" placeholder="Negro" name = "color">
-						<h4>Agrega una descripción</h4>
-						<textarea class="descripcion" placeholder="Message" name="descripcion"></textarea>
+						<input type="text" class="color" placeholder="Negro" required="" name = "color">
+						<h4>Agregar descripción</h4>
+						<textarea class="descripcion" placeholder="Descripción" required="" name="descripcion"></textarea>
 						<h4>Imagen</h4>
-						<input type="file" name="file" style="float: left;">
+						<input type="file" name="file" style="float: left;"> <!--Corregir -->
 						<br>
 						<br>
 						<input type="submit" name= "accion" value="Agregar telefono" >
