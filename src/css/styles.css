@@ -145,7 +145,7 @@ Styles Custom
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden;   /*fix overflow in opera and others*/
+    overflow: hidden;   /*fix overflow in opera and*/
 }
 
 .circle-data.desc {/*only the scrollbar is displayed in phone details*/
