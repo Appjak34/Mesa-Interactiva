@@ -10,7 +10,7 @@ session_start();
 </head>
 <body>
 
-	<center><h1>Agregar un Nuevo Dispositivo</h1></center>
+	<<h1>Agregar un Nuevo Dispositivo</h1>
 	<form action="altadispositivo.php" method = "post" enctype="multipart/form-data">
 		<fieldset>
 			Imagen<br>
