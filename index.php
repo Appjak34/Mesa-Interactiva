@@ -57,7 +57,7 @@ include './database/conexion.php';
                     </div>
                     <div class="modelo detail-data"></div>
                 </div>
-                <div class="circle-data desc">
+                <div class="circle-data desc" id = "style-scroll">
                     <div class="icon">
                         <span class="fas fa-info"></span>
                     </div>
